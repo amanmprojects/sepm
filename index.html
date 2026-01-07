@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Software Engineering & Project Management</title>
+    <style>
+         :root {
+            --bg: #f7f9fc;
+            --card: #ffffff;
+            --accent: #0a6df3;
+            --accent-2: #4f9cf9;
+            --text: #0f1724;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --radius: 10px;
+            --shadow: 0 10px 35px rgba(15, 23, 36, 0.08);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .page {
+            max-width: 1080px;
+            margin: 32px auto 48px;
+            padding: 0 20px;
+        }
+        
+        header.page-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+        
+        .logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow);
+        }
+        
+        .brand h1 {
+            margin: 0 0 4px;
+            font-size: 1.75rem;
+        }
+        
+        .brand .lead {
+            margin: 0;
+            color: var(--muted);
+        }
+        
+        nav.nav {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+        }
+        
+        nav.nav a {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #e8f0ff;
+            color: var(--accent);
+            border: 1px solid #d7e6ff;
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+        
+        nav.nav a:hover {
+            background: #d9e9ff;
+            transform: translateY(-1px);
+        }
+        
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+        }
+        
+        .card {
+            background: var(--card);
+            padding: 20px 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        section h2,
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 1.1rem;
+            margin: 0.35rem 0 0;
+        }
+        
+        ul li+li {
+            margin-top: 6px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #eef2f7;
+            text-align: left;
+            font-size: 0.96rem;
+        }
+        
+        th {
+            background: #f2f6ff;
+            color: #1f2937;
+        }
+        
+        footer {
+            margin-top: 28px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 980px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            header.page-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .logo {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="page-header">
+            <div class="logo">SE</div>
+            <div class="brand">
+                <h1>Software Engineering & Project Management</h1>
+                <p class="lead">Course overview, outcomes, schedule, and resources</p>
+            </div>
+        </header>
+
+        <nav class="nav" aria-label="Page navigation">
+            <a href="#overview">Overview</a>
+            <a href="#syllabus">Syllabus</a>
+            <a href="#outcomes">Learning Outcomes</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#resources">Resources</a>
+        </nav>
+
+        <main class="layout">
+            <div class="content">
+                <section id="overview" class="card">
+                    <h2>Overview</h2>
+                    <p>This course covers principles and practices of software engineering alongside project management techniques used to plan, execute, and deliver software systems. Topics include requirements, design, testing, agile methods, risk management,
+                        estimation, and team collaboration.</p>
+                </section>
+
+                <section id="syllabus" class="card">
+                    <h2>Syllabus (high level)</h2>
+                    <ul>
+                        <li>Introduction to Software Engineering & lifecycle models</li>
+                        <li>Requirements engineering and stakeholder analysis</li>
+                        <li>Testing, quality assurance, and continuous integration</li>
+                        <li>Project planning, scheduling, and estimation (e.g., COCOMO, story points)</li>
+                        <li>Agile frameworks (Scrum, Kanban) and team practices</li>
+                        <li>Risk, change, and configuration management</li>
+                    </ul>
+                </section>
+
+                <section id="outcomes" class="card">
+                    <h2>Learning Outcomes</h2>
+                    <ul>
+                        <li>Explain major software development lifecycle models and trade-offs</li>
+                        <li>Create basic requirements artifacts and use cases</li>
+                        <li>Design simple software architectures and apply design patterns</li>
+                        <li>Plan and track a software project using common project management techniques</li>
+                        <li>Apply basic testing strategies and quality assurance practices</li>
+                    </ul>
+                </section>
+
+                <section id="resources" class="card">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li>Suggested text: Ian Sommerville, <em>Software Engineering</em></li>
+                        <li>Online: Scrum Guide, ISO/IEC standards summaries</li>
+                        <li>Tools: Git, Jira/ClickUp, CI services (GitHub Actions)</li>
+                        <li>Supplemental: Software architecture and design patterns references</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="card" id="course-info">
+                    <h3>Course Info</h3>
+                    <p><strong>Code:</strong> SEPM101</p>
+                    <p><strong>Credits:</strong> 3</p>
+                    <p><strong>Instructor:</strong> Dr. A. Instructor</p>
+                </div>
+
+                <div class="card" id="schedule" style="margin-top:16px">
+                    <h3>Sample Schedule</h3>
+                    <table aria-label="course schedule">
+                        <thead>
+                            <tr>
+                                <th scope="col">Week</th>
+                                <th scope="col">Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-2</td>
+                                <td>Introduction & Requirements</td>
+                            </tr>
+                            <tr>
+                                <td>3-4</td>
+                                <td>Architecture & Design</td>
+                            </tr>
+                            <tr>
+                                <td>5-6</td>
+                                <td>Testing & QA</td>
+                            </tr>
+                            <tr>
+                                <td>7-8</td>
+                                <td>Project Management & Estimation</td>
+                            </tr>
+                            <tr>
+                                <td>9-12</td>
+                                <td>Agile Practices & Team Project</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>Use this page as a starting point for course materials, assignments, and schedules.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
